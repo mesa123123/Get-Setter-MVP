@@ -1,0 +1,73 @@
+﻿<Page
+    x:Class="Get_Setter.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Get_Setter"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid x:Name="Main_Grid"  Background="#ff061955" HorizontalAlignment="Left" Margin="6,0,0,0" Width="1501" VerticalAlignment="Stretch">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="117*"/>
+            <RowDefinition Height="83*"/>
+        </Grid.RowDefinitions>
+        <!--<Image Source="./Assets/Background.png" Stretch="Fill"/>-->
+        <Border HorizontalAlignment="Left" Height="1008" Margin="34,-1,0,0" VerticalAlignment="Top" Width="147" BorderThickness="2" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#cc113EC8" Offset="0"></GradientStop>
+                    <GradientStop Color="#ff113EC8" Offset="1"></GradientStop>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+        <Button BorderBrush="White" HorizontalAlignment="Left" Height="120" Margin="78,370,0,0" VerticalAlignment="Top" Width="237" BorderThickness="2">
+            <Button.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#cc061955" Offset="1"></GradientStop>
+                    <GradientStop Color="#ff061955" Offset="0"></GradientStop>
+                </LinearGradientBrush>
+            </Button.Background>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Foreground="White" FontFamily="./Assets/Draftsman.tff#Draftsman">
+                    MY ROUTINES
+            </TextBlock>
+        </Button>
+        <Border BorderBrush="White" HorizontalAlignment="Left" Height="248" Margin="38,93.5,0,0" VerticalAlignment="Top" Width="596" Background="#ff113EC8" BorderThickness="5" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <Border BorderBrush="White" HorizontalAlignment="Center" VerticalAlignment="Center" Height="143" Width="1100" >
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#ff061955" Offset="1"/>
+                        <GradientStop Color="#99061955" Offset="0"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="72" Foreground="White" FontFamily="./Assets/Draftsman.tff#Draftsman"><Run Text="GET SETTER"/></TextBlock>
+            </Border>
+        </Border>
+        <Button BorderBrush="White" HorizontalAlignment="Left" Height="120" Margin="78,103,0,0" VerticalAlignment="Top" Width="237" BorderThickness="2" Grid.Row="1">
+            <Button.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#ff113EC8" Offset="1"/>
+                    <GradientStop Color="#ff113EC8" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Foreground="White" FontFamily="./Assets/Draftsman.tff#Draftsman"><Run Text="ROUTINE RECORDS"/></TextBlock>
+        </Button>
+        <Button BorderBrush="White" HorizontalAlignment="Left" Height="120" Margin="78,525,0,0" VerticalAlignment="Top" Width="237" BorderThickness="2" Grid.RowSpan="2" Click="Button_Click_1">
+            <Button.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#ff061955" Offset="1"/>
+                    <GradientStop Color="#cc061955" Offset="0"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Foreground="White" FontFamily="./Assets/Draftsman.tff#Draftsman"><Run Text="NEW ROUTINE"/></TextBlock>
+        </Button>
+        <Button Content="START WORKOUT" HorizontalAlignment="Left" FontSize="56" Foreground="AntiqueWhite" FontFamily="./Assets/Draftsman.tff#Draftsman" Height="201" Margin="765,114,0,0" Grid.Row="1" VerticalAlignment="Top" Width="609" Click="Button_Click">
+            <Button.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#ff113EC8" Offset="0"/>
+                    <GradientStop Color="#cc113EC8" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+    </Grid>
+</Page>
