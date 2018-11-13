@@ -7,15 +7,120 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="#ff061955">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="459*"/>
+            <RowDefinition Height="541*"/>
+        </Grid.RowDefinitions>
+        <SplitView IsPaneOpen="True" DisplayMode="CompactInline" Width="Auto" HorizontalAlignment="Stretch" Margin="0,0,0,0" Grid.RowSpan="2" VerticalAlignment="Stretch">
+            <SplitView.PaneBackground>
+                <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,0.5">
+                    <GradientStop Color="#ff061955" Offset="0.4"/>
+                    <GradientStop Color="#ff113EC8" Offset="0.39"/>
+                    <GradientStop Color="#ff113EC8" Offset="0.11"/>
+                    <GradientStop Color="#ff061955" Offset="0.1"/>
+                </LinearGradientBrush>
+            </SplitView.PaneBackground>
+            <SplitView.Pane>
+                <Grid Background="Transparent">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Border BorderBrush="White" HorizontalAlignment="Left" Height="248" VerticalAlignment="Top" Width="596" Background="#ff113EC8" BorderThickness="5" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                        <Border BorderBrush="White" HorizontalAlignment="Center" VerticalAlignment="Center" Height="143" Width="1100" >
+                            <Border.Background>
+                                <LinearGradientBrush>
+                                    <GradientStop Color="#ff061955" Offset="1"/>
+                                    <GradientStop Color="#99061955" Offset="0"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="72" Foreground="White" FontFamily="./Assets/Draftsman.tff#Draftsman"><Run Text="GET SETTER"/></TextBlock>
+                        </Border>
+                    </Border>
+                    <Button BorderBrush="White" HorizontalAlignment="Left" Height="120" Margin="78,370,0,0" VerticalAlignment="Top" Width="237" BorderThickness="2">
+                        <Button.Background>
+                            <LinearGradientBrush>
+                                <GradientStop Color="#cc061955" Offset="1"></GradientStop>
+                                <GradientStop Color="#ff061955" Offset="0"></GradientStop>
+                            </LinearGradientBrush>
+                        </Button.Background>
+                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Foreground="White" FontFamily="./Assets/Draftsman.tff#Draftsman">
+                        MY ROUTINES
+                        </TextBlock>
+                    </Button>
+                    <Button BorderBrush="White" HorizontalAlignment="Left" Height="120" Margin="75,219,0,0" VerticalAlignment="Top" Width="237" BorderThickness="2" Grid.Row="3">
+                        <Button.Background>
+                            <LinearGradientBrush>
+                                <GradientStop Color="#ff113EC8" Offset="1"/>
+                                <GradientStop Color="#ff113EC8" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Button.Background>
+                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Foreground="White" FontFamily="./Assets/Draftsman.tff#Draftsman"><Run Text="ROUTINE RECORDS"/></TextBlock>
+                    </Button>
+                    <Button BorderBrush="White" HorizontalAlignment="Left" Height="120" Margin="69,0,0,0" VerticalAlignment="Top" Width="237" BorderThickness="2" Grid.Row="3">
+                        <Button.Background>
+                            <LinearGradientBrush>
+                                <GradientStop Color="#cc061955" Offset="1"/>
+                                <GradientStop Color="#ff061955" Offset="0"/>
+                            </LinearGradientBrush>
+                        </Button.Background>
+                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Foreground="White" FontFamily="./Assets/Draftsman.tff#Draftsman"><Run Text="MY ROUTINES"/></TextBlock>
+                    </Button>
+                </Grid>
+            </SplitView.Pane>
+            <Grid HorizontalAlignment="Stretch" Margin="-6,-6,6,6" VerticalAlignment="Stretch">
+                <TextBlock Foreground="White" FontSize="26" HorizontalAlignment="Left" Margin="384,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Set Goals and How Many Days you want to train"/>
+                <AppBarToggleButton Background="White" HorizontalAlignment="Left" Height="87" Icon="Accept" Label="AppBarToggleButton" Margin="288,210,0,0" VerticalAlignment="Top" Width="258"/>
+                <AppBarToggleButton Background="White" HorizontalAlignment="Left" Height="87" Icon="Accept" Label="AppBarToggleButton" Margin="564,213,0,0" VerticalAlignment="Top" Width="258"/>
+                <AppBarToggleButton Background="White" HorizontalAlignment="Left" Height="87" Icon="Accept" Label="AppBarToggleButton" Margin="843,207,0,0" VerticalAlignment="Top" Width="258"/>
+                <Slider Background="White" HorizontalAlignment="Left" Height="50" Margin="264,336,0,0" VerticalAlignment="Top" Width="849"/>
+                <Button Content="Button" HorizontalAlignment="Left" Height="64" Margin="579,410,0,0" VerticalAlignment="Top" Width="236" Click="ChooseExercises"/>
+                <Grid HorizontalAlignment="Center" Height="378" Margin="0,535,0,0" VerticalAlignment="Top" Width="1200">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="Routine Day 1: {Asset}"/>
+                    <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="0" BorderBrush="White">
+                        <TextBlock Text="Select One Of the Following"/>
+                        <StackPanel Orientation="Vertical">
+                            <RadioButton Content="Option-1"/>
+                            <RadioButton Content="Option-2"/>
+                            <RadioButton Content="Option-2"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+                <ListView ItemsSource="{x:Bind exerciseList}" SelectionMode="Single"/>
+            </Grid>
+        </SplitView>
+        <Grid HorizontalAlignment="Center" Height="378" Margin="0,535,0,0" VerticalAlignment="Top" Width="1200">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="Routine Day 1: {Asset}"/>
+            <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="0" BorderBrush="White">
+                <TextBlock Text="Select One Of the Following"/>
+                <StackPanel Orientation="Vertical">
+                    <RadioButton Content="Option-1"/>
+                    <RadioButton Content="Option-2"/>
+                    <RadioButton Content="Option-2"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
 
-    <FlyoutBase.AttachedFlyout>
-        <MenuFlyout>
-            <MenuFlyoutItem>
-             Hello
-            </MenuFlyoutItem>
-        </MenuFlyout>
-    </FlyoutBase.AttachedFlyout>
-    <Grid>
-        
     </Grid>
 </Page>

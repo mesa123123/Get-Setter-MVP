@@ -25,6 +25,8 @@ namespace Get_Setter
         public MainPage()
         {
             this.InitializeComponent();
+
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -34,7 +36,7 @@ namespace Get_Setter
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(NewRoutinePage));
+            this.Frame.Navigate(typeof(RoutineManagementPage));
         }
     }
 }

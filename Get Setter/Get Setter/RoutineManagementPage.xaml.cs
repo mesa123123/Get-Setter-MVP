@@ -13,8 +13,6 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using SQLite.Net;
-using SQLite.Net.Attributes;
-using System.Collections;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -23,23 +21,20 @@ namespace Get_Setter
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class NewRoutinePage : Page
+    public sealed partial class RoutineManagementPage : Page
     {
 
         string dBPath;
         SQLiteConnection dBConnection;
         List<string> exerciseList;
+        string Premiere;
 
-        public NewRoutinePage()
+        public RoutineManagementPage()
         {
             this.InitializeComponent();
             dBPath = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "GetSetterDb.db");
             dBConnection = new SQLiteConnection(new
                    SQLite.Net.Platform.WinRT.SQLitePlatformWinRT(), dBPath);
-        }
-
-        private void ChooseExercises(object sender, RoutedEventArgs e)
-        {
             var query = dBConnection.Table<Exercises>();
 
             this.exerciseList = new List<string>();
@@ -48,19 +43,8 @@ namespace Get_Setter
                 this.exerciseList.Add(record.ExerciseName);
             }
 
+            Premiere = exerciseList[0];
 
         }
     }
-
-
-    public class Exercises
-    {
-        [PrimaryKey, AutoIncrement]
-        public int ExerciseID { get; set; }
-        public string ExerciseName { get; set; }
-        public string MuscleGroup { get; set; }
-        public string MuscleName { get; set; }
-
-    }
-
 }
