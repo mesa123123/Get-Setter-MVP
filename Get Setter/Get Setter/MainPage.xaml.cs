@@ -29,14 +29,25 @@ namespace Get_Setter
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void NavToRoutineManagement(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(RoutineManagementPage));
         }
+
+        private void NavToNewRoutine(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(RoutineManagementPage));
+        }
+
+        private void NavToRoutineRecords(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(RoutineRecords));
+        }
+
+        private void NavToThisWorkout(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Workout));
+        }
+
     }
 }

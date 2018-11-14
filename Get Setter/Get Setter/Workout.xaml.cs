@@ -12,8 +12,6 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using SQLite.Net;
-using Get_Setter.Models;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -22,11 +20,9 @@ namespace Get_Setter
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class RoutineManagementPage : Page
+    public sealed partial class Workout : Page
     {
-
-
-        public RoutineManagementPage()
+        public Workout()
         {
             this.InitializeComponent();
         }
@@ -35,6 +31,5 @@ namespace Get_Setter
         {
             NavigationPane.IsPaneOpen = !NavigationPane.IsPaneOpen;
         }
-
     }
 }
