@@ -36,7 +36,7 @@ namespace Get_Setter
 
         private void NavToNewRoutine(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(RoutineManagementPage));
+            this.Frame.Navigate(typeof(NewRoutinePage));
         }
 
         private void NavToRoutineRecords(object sender, RoutedEventArgs e)

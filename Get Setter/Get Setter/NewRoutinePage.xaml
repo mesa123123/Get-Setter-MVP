@@ -29,6 +29,7 @@
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="2.5*"/>
                         </Grid.RowDefinitions>
+                        <Button Grid.Row="0" Grid.Column="0" Content="=" Foreground="White" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20" Click="PaneTrigger"/>
                         <Border Style="{StaticResource TitleBorderOuter}" Grid.Row="0" Margin="0, 75, 0, 75">
                             <Border Style="{StaticResource TitleBorderInner}">
                                 <TextBlock Style="{StaticResource Title}">GET SETTER</TextBlock>
@@ -51,12 +52,30 @@
             </SplitView.Pane>
             <SplitView.Content>
                 <Grid>
-                    <Button Style="{StaticResource DarkButton}" VerticalAlignment="Top" HorizontalAlignment="Left" Width="300" Height="200" Margin="500 0 0 0" Click="PaneTrigger">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Button Grid.Row="1" Style="{StaticResource DarkButton}" VerticalAlignment="Top" HorizontalAlignment="Left" Width="300" Height="200" Margin="0 0 0 0" Click="PaneTrigger">
                         <TextBlock Style="{StaticResource ButtonText}" Text="TRIGGER-PANE"/>
                     </Button>
+                    <Grid Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" BorderBrush="White" BorderThickness="3" MaxHeight="300" MaxWidth="900">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="100" MaxHeight="200"/>
+                            <RowDefinition Height="100" MaxHeight="200"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="200" MaxWidth="200"/>
+                            <ColumnDefinition Width="200" MaxWidth="200"/>
+                            <ColumnDefinition Width="200" MaxWidth="200"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Style="{StaticResource Title}" Text="SELECT YOUR GOAL" Grid.Column="0" Grid.ColumnSpan="3"/>
+                        <RadioButton Style="{StaticResource RadioBluePrint}" Grid.Row="1" Grid.Column="0" Content="BUILD MUSCLE" Tag="buildMuscle" GroupName="GoalButton" Checked="Goal_Button_Checked" IsChecked="True"/>
+                        <RadioButton Style="{StaticResource RadioBluePrint}" Grid.Row="1" Grid.Column="1" Content="LOSE WEIGHT" Tag="loseWeight" GroupName="GoalButton" Checked="Goal_Button_Checked"/>
+                        <RadioButton Style="{StaticResource RadioBluePrint}" Grid.Row="1" Grid.Column="2" Content="GET STRONGER" Tag="getStronger" GroupName="GoalButton" Checked="Goal_Button_Checked"/>
+                    </Grid>
                 </Grid>
             </SplitView.Content>
         </SplitView>
-
     </Grid>
 </Page>

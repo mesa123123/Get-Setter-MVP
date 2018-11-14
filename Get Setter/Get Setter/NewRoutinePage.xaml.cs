@@ -25,6 +25,7 @@ namespace Get_Setter
     /// </summary>
     public sealed partial class NewRoutinePage : Page
     {
+        private string RoutineGoal;
 
         public NewRoutinePage()
         {
@@ -34,6 +35,27 @@ namespace Get_Setter
         private void PaneTrigger(object sender, RoutedEventArgs e)
         {
             NavigationPane.IsPaneOpen = !NavigationPane.IsPaneOpen;
+        }
+
+        private void NavToRoutineManagement(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(RoutineManagementPage));
+        }
+
+        private void NavToRoutineRecords(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(RoutineRecords));
+        }
+
+        private void NavToThisWorkout(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Workout));
+        }
+
+        private void Goal_Button_Checked(object sender, RoutedEventArgs e)
+        {
+            RadioButton checkedGoal = sender as RadioButton;
+            RoutineGoal = checkedGoal.Tag.ToString();
         }
 
     }

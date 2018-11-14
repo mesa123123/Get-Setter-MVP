@@ -31,5 +31,22 @@ namespace Get_Setter
         {
             NavigationPane.IsPaneOpen = !NavigationPane.IsPaneOpen;
         }
+
+        private void NavToRoutineManagement(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(RoutineManagementPage));
+        }
+
+        private void NavToNewRoutine(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(RoutineManagementPage));
+        }
+
+        private void NavToRoutineRecords(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(RoutineRecords));
+        }
+
+
     }
 }
