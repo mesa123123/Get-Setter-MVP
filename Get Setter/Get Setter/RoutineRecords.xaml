@@ -12,43 +12,45 @@ Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <Grid Background="{StaticResource DarkBluePrint}">
         <SplitView Name="NavigationPane" IsPaneOpen="False" DisplayMode="Overlay">
             <SplitView.Pane>
-                <Grid>
-                    <Grid.Background>
-                        <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,0.5">
-                            <GradientStop Color="#ff113EC8" Offset="0.4"></GradientStop>
-                            <GradientStop Color="#ff061955" Offset="0.15"></GradientStop>
-                            <GradientStop Color="#ff061955" Offset="0.4"></GradientStop>
-                            <GradientStop Color="#ff113EC8" Offset="0.15"></GradientStop>
-                        </LinearGradientBrush>
-                    </Grid.Background>
-                    <Grid Background="Transparent" HorizontalAlignment="Right" VerticalAlignment="Stretch" Width="275">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="2.5*"/>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="2.5*"/>
-                        </Grid.RowDefinitions>
-                        <Border Style="{StaticResource TitleBorderOuter}" Grid.Row="0" Margin="0, 75, 0, 75">
-                            <Border Style="{StaticResource TitleBorderInner}">
-                                <TextBlock Style="{StaticResource Title}">GET SETTER</TextBlock>
+                <Viewbox Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Grid>
+                        <Grid.Background>
+                            <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,0.5">
+                                <GradientStop Color="#ff113EC8" Offset="0.4"></GradientStop>
+                                <GradientStop Color="#ff061955" Offset="0.15"></GradientStop>
+                                <GradientStop Color="#ff061955" Offset="0.4"></GradientStop>
+                                <GradientStop Color="#ff113EC8" Offset="0.15"></GradientStop>
+                            </LinearGradientBrush>
+                        </Grid.Background>
+                        <Grid Background="Transparent" HorizontalAlignment="Right" VerticalAlignment="Stretch" Width="275">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="2.5*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="2.5*"/>
+                            </Grid.RowDefinitions>
+                            <Border Style="{StaticResource TitleBorderOuter}" Grid.Row="0" Margin="0, 75, 0, 75">
+                                <Border Style="{StaticResource TitleBorderInner}">
+                                    <TextBlock Style="{StaticResource Title}">GET SETTER</TextBlock>
+                                </Border>
                             </Border>
-                        </Border>
-                        <Button Grid.Row="1" Style="{StaticResource DarkButton}" Width="200" Margin="50, 20, 20, 20" Padding="20" Height="Auto">
-                            <TextBlock Style="{StaticResource ButtonText}" Text="NEW ROUTINE" FontSize="20"/>
-                        </Button>
-                        <Button Grid.Row="2" Style="{StaticResource DarkButton}" Width="200" Margin="50, 20, 0, 20" Padding="20" Height="Auto">
-                            <TextBlock Style="{StaticResource ButtonText}" Text="MY ROUTINES" FontSize="20"/>
-                        </Button>
-                        <Button Grid.Row="3" Style="{StaticResource DarkButton}" Width="200" Margin="50, 20, 20, 20" Padding="10" Height="Auto">
-                            <TextBlock Style="{StaticResource ButtonText}" Text="START WORKOUT" FontSize="20"/>
-                        </Button>
-                        <Button Grid.Row="4" Style="{StaticResource LightButton}" Width="200" Margin="50, 20, 20, 20" Padding="20" Height="Auto">
-                            <TextBlock Style="{StaticResource ButtonText}" Text="HOMEPAGE" FontSize="20"/>
-                        </Button>
+                            <Button Grid.Row="1" Style="{StaticResource DarkButton}" Width="200" Margin="50, 20, 20, 20" Padding="20" Height="Auto">
+                                <TextBlock Style="{StaticResource ButtonText}" Text="NEW ROUTINE" FontSize="20"/>
+                            </Button>
+                            <Button Grid.Row="2" Style="{StaticResource DarkButton}" Width="200" Margin="50, 20, 0, 20" Padding="20" Height="Auto">
+                                <TextBlock Style="{StaticResource ButtonText}" Text="MY ROUTINES" FontSize="20"/>
+                            </Button>
+                            <Button Grid.Row="3" Style="{StaticResource DarkButton}" Width="200" Margin="50, 20, 20, 20" Padding="10" Height="Auto">
+                                <TextBlock Style="{StaticResource ButtonText}" Text="START WORKOUT" FontSize="20"/>
+                            </Button>
+                            <Button Grid.Row="4" Style="{StaticResource LightButton}" Width="200" Margin="50, 20, 20, 20" Padding="20" Height="Auto">
+                                <TextBlock Style="{StaticResource ButtonText}" Text="HOMEPAGE" FontSize="20"/>
+                            </Button>
+                        </Grid>
                     </Grid>
-                </Grid>
+                </Viewbox>
             </SplitView.Pane>
             <SplitView.Content>
                 <Grid>

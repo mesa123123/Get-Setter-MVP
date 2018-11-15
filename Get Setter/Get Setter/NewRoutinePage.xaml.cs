@@ -26,6 +26,9 @@ namespace Get_Setter
     public sealed partial class NewRoutinePage : Page
     {
         private string RoutineGoal;
+        private string Day11;
+        private string Day12;
+        private string Day13;
 
         public NewRoutinePage()
         {
@@ -56,6 +59,24 @@ namespace Get_Setter
         {
             RadioButton checkedGoal = sender as RadioButton;
             RoutineGoal = checkedGoal.Tag.ToString();
+        }
+
+        private void Day1_1_Checked(object sender, RoutedEventArgs e)
+        {
+            RadioButton pickedExercise = sender as RadioButton;
+            Day11 = pickedExercise.Tag.ToString();
+        }
+
+        private void Day1_2_Checked(object sender, RoutedEventArgs e)
+        {
+            RadioButton pickedExercise = sender as RadioButton;
+            Day12 = pickedExercise.Tag.ToString();
+        }
+
+        private void Day1_3_Checked(object sender, RoutedEventArgs e)
+        {
+            RadioButton pickedExercise = sender as RadioButton;
+            Day13 = pickedExercise.Tag.ToString();
         }
 
     }

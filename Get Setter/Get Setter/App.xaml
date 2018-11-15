@@ -74,7 +74,7 @@
                 <Setter Property="Foreground" Value="White"/>
                 <Setter Property="HorizontalAlignment" Value="Center"/>
                 <Setter Property="VerticalAlignment" Value="Center"/>
-                <Setter Property="Background" Value="#ff113EC8"/>
+                <Setter Property="Background" Value="{StaticResource LightBluePrint}"/>
                 <Setter Property="BorderBrush" Value="White"/>
                 <Setter Property="BorderThickness" Value="1"/>
 
@@ -215,11 +215,10 @@
                         </ControlTemplate>
                     </Setter.Value>
                 </Setter>
-
-
-
-
+                
             </Style>
+
+            
         </ResourceDictionary>
     </Application.Resources>
 

@@ -33,7 +33,11 @@ namespace Get_Setter
             this.Suspending += OnSuspending;
         }
 
-        public static MobileServiceClient MobileService = new MobileServiceClient("https://get-setter.azurewebsites.net");
+        //MobileServiceClientStuffAzureBackend
+        public static MobileServiceClient MobileService = new MobileServiceClient("https://getsetter.azurewebsites.net");
+        //public static MobileServiceClient MobileService = new MobileServiceClient("https://getsetter.azurewebsites.fail");
+
+        
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points
         /// will be used such as when the application is launched to open a specific file.
