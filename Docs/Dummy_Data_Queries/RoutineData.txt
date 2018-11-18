@@ -1,0 +1,26 @@
+INSERT INTO Routines
+VALUES (1, 'Lose_Weight', 4, NULL);
+INSERT INTO Routines
+VALUES (2, 'Build_Muscle', 4, NULL);
+INSERT INTO Routines
+VALUES (3, 'Gain_Strength', 4, NULL);
+INSERT INTO Routines
+VALUES (4, 'Lose_Weight', 4, NULL);
+INSERT INTO Routines
+VALUES (5, 'Gain_Strength', 4, NULL);
+INSERT INTO Routines
+VALUES (6, 'Build_Muscle', 4, NULL);
+INSERT INTO Routines
+VALUES (7, 'Build_Muscle', 4, NULL);
+INSERT INTO Routines
+VALUES (8, 'Gain_Strength', 4, NULL);
+INSERT INTO Routines
+VALUES (9, 'Lose_Weight', 4, NULL);
+INSERT INTO Routines
+VALUES (10, 'Build_Muscle', 4, NULL);
+INSERT INTO Routines
+VALUES (11, 'Gain_Strength', 4, NULL);
+INSERT INTO Routines
+VALUES (12, 'Lose_Weight', 4, NULL);
+INSERT INTO Routines
+VALUES (13, 'Gain_Strength', 4, NULL);

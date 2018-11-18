@@ -7,51 +7,131 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <Grid Background="{StaticResource DarkBluePrint}">
-        <SplitView Name="NavigationPane" IsPaneOpen="False" DisplayMode="Overlay">
+        <SplitView Name="NavigationPane" IsPaneOpen="True" DisplayMode="Overlay">
             <SplitView.Pane>
-                <Grid>
-                    <Grid.Background>
-                        <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,0.5">
-                            <GradientStop Color="#ff113EC8" Offset="0.4"></GradientStop>
-                            <GradientStop Color="#ff061955" Offset="0.15"></GradientStop>
-                            <GradientStop Color="#ff061955" Offset="0.4"></GradientStop>
-                            <GradientStop Color="#ff113EC8" Offset="0.15"></GradientStop>
-                        </LinearGradientBrush>
-                    </Grid.Background>
-                    <Grid Background="Transparent" HorizontalAlignment="Right" VerticalAlignment="Stretch" Width="275">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="2.5*"/>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="2.5*"/>
-                        </Grid.RowDefinitions>
-                        <Border Style="{StaticResource TitleBorderOuter}" Grid.Row="0" Margin="0, 75, 0, 75">
-                            <Border Style="{StaticResource TitleBorderInner}">
-                                <TextBlock Style="{StaticResource Title}">GET SETTER</TextBlock>
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="{StaticResource DarkBluePrint}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="0.8*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.5*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="0.25*"/>
+                    </Grid.ColumnDefinitions>
+                    <Border Background="{StaticResource LightBluePrint}" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="13"/>
+                    <Border Grid.Row="1" Grid.RowSpan="3" Grid.Column="1" Grid.ColumnSpan="5" BorderBrush="White" BorderThickness="3" Background="{StaticResource LightBluePrint}">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="0.4*"/>
+                                <RowDefinition Height="1.2*"/>
+                                <RowDefinition Height="0.4*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="0*"/>
+                            </Grid.ColumnDefinitions>
+                            <Border Grid.Column="1" Grid.Row="1" Style="{StaticResource TitleBorderInner}" BorderThickness="3" BorderBrush="White" Margin="-3">
+                                <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                    <TextBlock Style="{StaticResource Title}" Text="GET-SETTER" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                </Viewbox>
                             </Border>
-                        </Border>
-                        <Button Grid.Row="1" Style="{StaticResource DarkButton}" Width="200" Margin="50, 20, 20, 20" Padding="20" Height="Auto">
-                            <TextBlock Style="{StaticResource ButtonText}" Text="NEW ROUTINE" FontSize="20"/>
+                        </Grid>
+                    </Border>
+                    <Grid Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="4" Grid.RowSpan="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.5*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="0.5*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.25*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="0.25*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Style="{StaticResource DarkButton}" Click="NavToNewRoutine" BorderThickness="3" BorderBrush="White" Margin="-3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                            <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                <TextBlock Style="{StaticResource Title}" Text="NEW ROUTINE" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                            </Viewbox>
                         </Button>
-                        <Button Grid.Row="2" Style="{StaticResource DarkButton}" Width="200" Margin="50, 20, 0, 20" Padding="20" Height="Auto">
-                            <TextBlock Style="{StaticResource ButtonText}" Text="MY ROUTINES" FontSize="20"/>
+                    </Grid>
+                    <Grid Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="4" Grid.RowSpan="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.5*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="0.5*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.25*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="0.25*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Style="{StaticResource DarkButton}" Click="NavToRoutineRecords" BorderThickness="3" BorderBrush="White" Margin="-3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                            <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch"> 
+                                <TextBlock Style="{StaticResource Title}" Text="ROUTINE RECORDS" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                            </Viewbox>
                         </Button>
-                        <Button Grid.Row="3" Style="{StaticResource DarkButton}" Width="200" Margin="50, 20, 20, 20" Padding="10" Height="Auto">
-                            <TextBlock Style="{StaticResource ButtonText}" Text="START WORKOUT" FontSize="20"/>
-                        </Button>
-                        <Button Grid.Row="4" Style="{StaticResource LightButton}" Width="200" Margin="50, 20, 20, 20" Padding="20" Height="Auto">
-                            <TextBlock Style="{StaticResource ButtonText}" Text="HOMEPAGE" FontSize="20"/>
+                    </Grid>
+                    <Grid Grid.Column="1" Grid.Row="9" Grid.ColumnSpan="4" Grid.RowSpan="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.5*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="0.5*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.25*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="0.25*"/>
+
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Style="{StaticResource LightButton}" Click="NavToHome" BorderThickness="3" BorderBrush="White" Margin="-3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                            <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                <TextBlock Style="{StaticResource Title}" Text=" HOME PAGE " HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                            </Viewbox>
                         </Button>
                     </Grid>
                 </Grid>
             </SplitView.Pane>
             <SplitView.Content>
-                <Grid>
-                    <Button Style="{StaticResource DarkButton}" VerticalAlignment="Top" HorizontalAlignment="Left" Width="300" Height="200" Margin="500 0 0 0" Click="PaneTrigger">
-                        <TextBlock Style="{StaticResource ButtonText}" Text="TRIGGER-PANE"/>
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.2*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="0.2*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Row="1" Grid.Column="0" Style="{StaticResource DarkButton}" Margin="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="PaneTrigger">
+                        <TextBlock Style="{StaticResource ButtonText}" Text="MENU"/>
                     </Button>
+
                 </Grid>
             </SplitView.Content>
         </SplitView>

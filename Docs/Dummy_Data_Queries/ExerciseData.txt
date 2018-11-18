@@ -1,0 +1,216 @@
+INSERT INTO Exercises
+VALUES (2,'Squat','Strength','Legs',1);
+INSERT INTO Exercises
+VALUES (3,'Leg press','Strength','Legs',1);
+INSERT INTO Exercises
+VALUES (4,'Lunge','Strength','Legs',1);
+INSERT INTO Exercises
+VALUES (5,'Deadlift','Strength','Back',1);
+INSERT INTO Exercises
+VALUES (6,'Leg_Extension','Strength','Legs',2);
+INSERT INTO Exercises
+VALUES (7,'Leg curl','Strength','Legs',2);
+INSERT INTO Exercises
+VALUES (8,'Standing calf raise','Strength','Legs',3);
+INSERT INTO Exercises
+VALUES (9,'Seated calf raise','Strength','Legs',3);
+INSERT INTO Exercises
+VALUES (10,'Hip adductor','Strength','Legs',3);
+INSERT INTO Exercises
+VALUES (11,'Bench press','Strength','Chest',1);
+INSERT INTO Exercises
+VALUES (12,'Chest fly','Strength','Chest',2);
+INSERT INTO Exercises
+VALUES (13,'Push-up','Strength','Chest',3);
+INSERT INTO Exercises
+VALUES (14,'Pull-down','Strength','Chest',1);
+INSERT INTO Exercises
+VALUES (15,'Pull-up','Strength','Back',1);
+INSERT INTO Exercises
+VALUES (16,'Bent-over_Row','Strength','Back',2);
+INSERT INTO Exercises
+VALUES (17,'Upright_Row','Strength','Back',3);
+INSERT INTO Exercises
+VALUES (18,'Shoulder press','Strength','Shoulder',1);
+INSERT INTO Exercises
+VALUES (19,'Shoulder fly','Strength','Shoulder',2);
+INSERT INTO Exercises
+VALUES (20,'Lateral raise','Strength','Shoulder',3);
+INSERT INTO Exercises
+VALUES (21,'Shoulder shrug','Strength','Shoulder',3);
+INSERT INTO Exercises
+VALUES (22,'Pushdown','Strength','Arms',1);
+INSERT INTO Exercises
+VALUES (23,'Triceps_Extension','Strength','Arms',2);
+INSERT INTO Exercises
+VALUES (24,'Biceps curl','Strength','Arms',3);
+INSERT INTO Exercises
+VALUES (25,'Crunch','Strength','Abs',1);
+INSERT INTO Exercises
+VALUES (26,'Russian twist','Strength','Abs',2);
+INSERT INTO Exercises
+VALUES (27,'Leg raise','Strength','Abs',3);
+INSERT INTO Exercises
+VALUES (28,'Back_Extension','Strength','Abs',1);
+INSERT INTO Exercises
+VALUES (29,'Squat','Strength','Legs',1);
+INSERT INTO Exercises
+VALUES (30,'Leg press','Strength','Legs',1);
+INSERT INTO Exercises
+VALUES (31,'Lunge','Strength','Legs',1);
+INSERT INTO Exercises
+VALUES (32,'Deadlift','Strength','Back',1);
+INSERT INTO Exercises
+VALUES (33,'Leg_Extension','Strength','Legs',2);
+INSERT INTO Exercises
+VALUES (34,'Leg curl','Strength','Legs',2);
+INSERT INTO Exercises
+VALUES (35,'Standing calf raise','Strength','Legs',3);
+INSERT INTO Exercises
+VALUES (36,'Seated calf raise','Strength','Legs',3);
+INSERT INTO Exercises
+VALUES (37,'Hip adductor','Strength','Legs',3);
+INSERT INTO Exercises
+VALUES (38,'Bench press','Strength','Chest',1);
+INSERT INTO Exercises
+VALUES (39,'Chest fly','Strength','Chest',2);
+INSERT INTO Exercises
+VALUES (40,'Push-up','Strength','Chest',3);
+INSERT INTO Exercises
+VALUES (41,'Pull-down','Strength','Chest',1);
+INSERT INTO Exercises
+VALUES (42,'Pull-up','Strength','Back',1);
+INSERT INTO Exercises
+VALUES (43,'Bent-over_Row','Strength','Back',2);
+INSERT INTO Exercises
+VALUES (44,'Upright_Row','Strength','Back',3);
+INSERT INTO Exercises
+VALUES (45,'Shoulder press','Strength','Shoulder',1);
+INSERT INTO Exercises
+VALUES (46,'Shoulder fly','Strength','Shoulder',2);
+INSERT INTO Exercises
+VALUES (47,'Lateral raise','Strength','Shoulder',3);
+INSERT INTO Exercises
+VALUES (48,'Shoulder shrug','Strength','Shoulder',3);
+INSERT INTO Exercises
+VALUES (49,'Pushdown','Strength','Arms',1);
+INSERT INTO Exercises
+VALUES (50,'Triceps_Extension','Strength','Arms',2);
+INSERT INTO Exercises
+VALUES (51,'Biceps curl','Strength','Arms',3);
+INSERT INTO Exercises
+VALUES (52,'Crunch','Strength','Abs',1);
+INSERT INTO Exercises
+VALUES (53,'Russian twist','Strength','Abs',2);
+INSERT INTO Exercises
+VALUES (54,'Leg raise','Strength','Abs',3);
+INSERT INTO Exercises
+VALUES (55,'Back_Extension','Strength','Abs',1);
+INSERT INTO Exercises
+VALUES (56,'Squat','Strength','Legs',1);
+INSERT INTO Exercises
+VALUES (57,'Leg press','Strength','Legs',1);
+INSERT INTO Exercises
+VALUES (58,'Lunge','Strength','Legs',1);
+INSERT INTO Exercises
+VALUES (59,'Deadlift','Strength','Back',1);
+INSERT INTO Exercises
+VALUES (60,'Leg_Extension','Strength','Legs',2);
+INSERT INTO Exercises
+VALUES (61,'Leg curl','Strength','Legs',2);
+INSERT INTO Exercises
+VALUES (62,'Standing calf raise','Strength','Legs',3);
+INSERT INTO Exercises
+VALUES (63,'Seated calf raise','Strength','Legs',3);
+INSERT INTO Exercises
+VALUES (64,'Hip adductor','Strength','Legs',3);
+INSERT INTO Exercises
+VALUES (65,'Bench press','Strength','Chest',1);
+INSERT INTO Exercises
+VALUES (66,'Chest fly','Strength','Chest',2);
+INSERT INTO Exercises
+VALUES (67,'Push-up','Strength','Chest',3);
+INSERT INTO Exercises
+VALUES (68,'Pull-down','Strength','Chest',1);
+INSERT INTO Exercises
+VALUES (69,'Pull-up','Strength','Back',1);
+INSERT INTO Exercises
+VALUES (70,'Bent-over_Row','Strength','Back',2);
+INSERT INTO Exercises
+VALUES (71,'Upright_Row','Strength','Back',3);
+INSERT INTO Exercises
+VALUES (72,'Shoulder press','Strength','Shoulder',1);
+INSERT INTO Exercises
+VALUES (73,'Shoulder fly','Strength','Shoulder',2);
+INSERT INTO Exercises
+VALUES (74,'Lateral raise','Strength','Shoulder',3);
+INSERT INTO Exercises
+VALUES (75,'Shoulder shrug','Strength','Shoulder',3);
+INSERT INTO Exercises
+VALUES (76,'Pushdown','Strength','Arms',1);
+INSERT INTO Exercises
+VALUES (77,'Triceps_Extension','Strength','Arms',2);
+INSERT INTO Exercises
+VALUES (78,'Biceps curl','Strength','Arms',3);
+INSERT INTO Exercises
+VALUES (79,'Crunch','Strength','Abs',1);
+INSERT INTO Exercises
+VALUES (80,'Russian twist','Strength','Abs',2);
+INSERT INTO Exercises
+VALUES (81,'Leg raise','Strength','Abs',3);
+INSERT INTO Exercises
+VALUES (82,'Back_Extension','Strength','Abs',1);
+INSERT INTO Exercises
+VALUES (83,'Squat','Strength','Legs',1);
+INSERT INTO Exercises
+VALUES (84,'Leg press','Strength','Legs',1);
+INSERT INTO Exercises
+VALUES (85,'Lunge','Strength','Legs',1);
+INSERT INTO Exercises
+VALUES (86,'Deadlift','Strength','Back',1);
+INSERT INTO Exercises
+VALUES (87,'Leg_Extension','Strength','Legs',2);
+INSERT INTO Exercises
+VALUES (88,'Leg curl','Strength','Legs',2);
+INSERT INTO Exercises
+VALUES (89,'Standing calf raise','Strength','Legs',3);
+INSERT INTO Exercises
+VALUES (90,'Seated calf raise','Strength','Legs',3);
+INSERT INTO Exercises
+VALUES (91,'Hip adductor','Strength','Legs',3);
+INSERT INTO Exercises
+VALUES (92,'Bench press','Strength','Chest',1);
+INSERT INTO Exercises
+VALUES (93,'Chest fly','Strength','Chest',2);
+INSERT INTO Exercises
+VALUES (94,'Push-up','Strength','Chest',3);
+INSERT INTO Exercises
+VALUES (95,'Pull-down','Strength','Chest',1);
+INSERT INTO Exercises
+VALUES (96,'Pull-up','Strength','Back',1);
+INSERT INTO Exercises
+VALUES (97,'Bent-over_Row','Strength','Back',2);
+INSERT INTO Exercises
+VALUES (98,'Upright_Row','Strength','Back',3);
+INSERT INTO Exercises
+VALUES (99,'Shoulder press','Strength','Shoulder',1);
+INSERT INTO Exercises
+VALUES (100,'Shoulder fly','Strength','Shoulder',2);
+INSERT INTO Exercises
+VALUES (101,'Lateral raise','Strength','Shoulder',3);
+INSERT INTO Exercises
+VALUES (102,'Shoulder shrug','Strength','Shoulder',3);
+INSERT INTO Exercises
+VALUES (103,'Pushdown','Strength','Arms',1);
+INSERT INTO Exercises
+VALUES (104,'Triceps_Extension','Strength','Arms',2);
+INSERT INTO Exercises
+VALUES (105,'Biceps curl','Strength','Arms',3);
+INSERT INTO Exercises
+VALUES (106,'Crunch','Strength','Abs',1);
+INSERT INTO Exercises
+VALUES (107,'Russian twist','Strength','Abs',2);
+INSERT INTO Exercises
+VALUES (108,'Leg raise','Strength','Abs',3);
+INSERT INTO Exercises
+VALUES (109,'Back_Extension','Strength','Abs',1);

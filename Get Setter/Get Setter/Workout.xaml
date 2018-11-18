@@ -11,50 +11,1648 @@
     <Grid Background="{StaticResource DarkBluePrint}">
         <SplitView Name="NavigationPane" IsPaneOpen="False" DisplayMode="Overlay">
             <SplitView.Pane>
-                <Viewbox Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                    <Grid>
-                        <Grid.Background>
-                            <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,0.5">
-                                <GradientStop Color="#ff113EC8" Offset="0.4"></GradientStop>
-                                <GradientStop Color="#ff061955" Offset="0.15"></GradientStop>
-                                <GradientStop Color="#ff061955" Offset="0.4"></GradientStop>
-                                <GradientStop Color="#ff113EC8" Offset="0.15"></GradientStop>
-                            </LinearGradientBrush>
-                        </Grid.Background>
-                        <Grid Background="Transparent" HorizontalAlignment="Right" VerticalAlignment="Stretch" Width="275">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="{StaticResource DarkBluePrint}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="0.8*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.5*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="0.25*"/>
+                    </Grid.ColumnDefinitions>
+                    <Border Background="{StaticResource LightBluePrint}" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="13"/>
+                    <Border Grid.Row="1" Grid.RowSpan="3" Grid.Column="1" Grid.ColumnSpan="5" BorderBrush="White" BorderThickness="3" Background="{StaticResource LightBluePrint}">
+                        <Grid>
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="2.5*"/>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="2.5*"/>
+                                <RowDefinition Height="0.4*"/>
+                                <RowDefinition Height="1.2*"/>
+                                <RowDefinition Height="0.4*"/>
                             </Grid.RowDefinitions>
-                            <Border Style="{StaticResource TitleBorderOuter}" Grid.Row="0" Margin="0, 75, 0, 75">
-                                <Border Style="{StaticResource TitleBorderInner}">
-                                    <TextBlock Style="{StaticResource Title}">GET SETTER</TextBlock>
-                                </Border>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="0*"/>
+                            </Grid.ColumnDefinitions>
+                            <Border Grid.Column="1" Grid.Row="1" Style="{StaticResource TitleBorderInner}" BorderThickness="3" BorderBrush="White" Margin="-3">
+                                <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                    <TextBlock Style="{StaticResource Title}" Text="GET-SETTER" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                </Viewbox>
                             </Border>
-                            <Button Grid.Row="1" Style="{StaticResource DarkButton}" Width="200" Margin="50, 20, 20, 20" Padding="20" Height="Auto">
-                                <TextBlock Style="{StaticResource ButtonText}" Text="NEW ROUTINE" FontSize="20"/>
-                            </Button>
-                            <Button Grid.Row="2" Style="{StaticResource DarkButton}" Width="200" Margin="50, 20, 0, 20" Padding="20" Height="Auto">
-                                <TextBlock Style="{StaticResource ButtonText}" Text="MY ROUTINES" FontSize="20"/>
-                            </Button>
-                            <Button Grid.Row="3" Style="{StaticResource DarkButton}" Width="200" Margin="50, 20, 20, 20" Padding="10" Height="Auto">
-                                <TextBlock Style="{StaticResource ButtonText}" Text="START WORKOUT" FontSize="20"/>
-                            </Button>
-                            <Button Grid.Row="4" Style="{StaticResource LightButton}" Width="200" Margin="50, 20, 20, 20" Padding="20" Height="Auto">
-                                <TextBlock Style="{StaticResource ButtonText}" Text="HOMEPAGE" FontSize="20"/>
-                            </Button>
                         </Grid>
+                    </Border>
+                    <Grid Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="4" Grid.RowSpan="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.5*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="0.5*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.25*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="0.25*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Style="{StaticResource DarkButton}" Click="NavToRoutineManagement"  BorderThickness="3" BorderBrush="White" Margin="-3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                            <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                <TextBlock Style="{StaticResource Title}" Text="MY ROUTINES" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                            </Viewbox>
+                        </Button>
                     </Grid>
-                </Viewbox>
+                    <Grid Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="4" Grid.RowSpan="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.5*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="0.5*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.25*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="0.25*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Style="{StaticResource DarkButton}" Click="NavToRoutineRecords" BorderThickness="3" BorderBrush="White" Margin="-3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                            <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                <TextBlock Style="{StaticResource Title}" Text="ROUTINE RECORDS " HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                            </Viewbox>
+                        </Button>
+                    </Grid>
+                    <Grid Grid.Column="1" Grid.Row="9" Grid.ColumnSpan="4" Grid.RowSpan="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.5*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="0.5*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.5*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="0.5*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Style="{StaticResource LightButton}" Click="NavToHomePage" BorderThickness="3" BorderBrush="White" Margin="-3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                            <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                <TextBlock Style="{StaticResource Title}" Text="HOME PAGE" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                            </Viewbox>
+                        </Button>
+                    </Grid>
+                </Grid>
             </SplitView.Pane>
             <SplitView.Content>
-                <Grid>
-                    <Button Style="{StaticResource DarkButton}" VerticalAlignment="Top" HorizontalAlignment="Left" Width="300" Height="200" Margin="500 0 0 0" Click="PaneTrigger">
-                        <TextBlock Style="{StaticResource ButtonText}" Text="TRIGGER-PANE"/>
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="23*"/>
+                        <RowDefinition Height="70*"/>
+                        <RowDefinition Height="149*"/>
+                        <RowDefinition Height="148*"/>
+                        <RowDefinition Height="149*"/>
+                        <RowDefinition Height="40*"/>
+                        <RowDefinition Height="40*"/>
+                        <RowDefinition Height="23*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Row="1" Grid.Column="0" Style="{StaticResource DarkButton}" Margin="5,5,5,5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="PaneTrigger">
+                        <TextBlock Style="{StaticResource ButtonText}" Text="MENU"/>
+                    </Button>
+                    <Border Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Style="{StaticResource TitleBorderInner}" Margin="0,5,0,5">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="0.25*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="0.25*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.25*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="0.25*"/>
+                            </Grid.ColumnDefinitions>
+                            <Border Grid.Column="1" Grid.Row="1" Style="{StaticResource TitleBorderInner}" BorderThickness="0" BorderBrush="White">
+                                <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                    <TextBlock Style="{StaticResource Title}" Text="WORKOUT" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                </Viewbox>
+                            </Border>
+                        </Grid>
+                    </Border>
+                    <Grid Grid.Row="2" Grid.RowSpan="1" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.2*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="0.2*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.01*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="0.01*"/>
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Row="1" Grid.Column="1" BorderBrush="White" BorderThickness="3">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="0.4*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="0.1*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.5*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid Grid.Row="0" Grid.Column="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="0*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="0*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Border Grid.Column="1" Grid.Row="1" Style="{StaticResource TitleBorderInner}" BorderThickness="0" BorderBrush="White">
+                                        <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                            <TextBlock Style="{StaticResource Title}" Text="EXERCISE 1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                        </Viewbox>
+                                    </Border>
+                                </Grid>
+                                <Grid Grid.Row="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="0.2*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.2*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.01*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="0.01*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource ButtonText}" Text="WEIGHT"/>
+                                    <TextBlock Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource ButtonText}" Text="REPS"/>
+                                </Grid>
+                                <Grid Grid.Row="1" Grid.Column="1" BorderThickness="1" BorderBrush="White">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="0.2*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.2*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.01*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="0.01*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid Grid.Column="1" Grid.Row="1">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="2*"/>
+                                            <ColumnDefinition Width="0.75*"/>
+                                            <ColumnDefinition Width="0.75*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Border Grid.Column="0" Grid.Row="1" Style="{StaticResource TitleBorderInner}" BorderThickness="0" BorderBrush="White">
+                                            <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                <TextBlock Style="{StaticResource Title}" Text="WEIGHT" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                            </Viewbox>
+                                        </Border>
+                                        <Button Style="{StaticResource LightButton}" Grid.Column="1" VerticalAlignment="Stretch" >
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.05*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.05*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0.05*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0.05*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="+" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                        <Button Style="{StaticResource LightButton}" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.05*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.05*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="-" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                    </Grid>
+                                    <Grid Grid.Column="1" Grid.Row="2">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="2*"/>
+                                            <ColumnDefinition Width="0.75*"/>
+                                            <ColumnDefinition Width="0.75*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Border Grid.Column="0" Grid.Row="1" Style="{StaticResource TitleBorderInner}" BorderThickness="0" BorderBrush="White">
+                                            <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                <TextBlock Style="{StaticResource Title}" Text="WEIGHT" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                            </Viewbox>
+                                        </Border>
+                                        <Button Style="{StaticResource LightButton}" Grid.Column="1" VerticalAlignment="Stretch" >
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.05*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.05*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0.05*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0.05*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="+" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                        <Button Style="{StaticResource LightButton}" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.05*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.05*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="-" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                    </Grid>
+                                    <Grid Grid.Column="2" Grid.Row="1" Grid.RowSpan="2">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="0.25*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="0.25*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="0.15*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="0.15*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Button Grid.Row="1" Grid.Column="1" Style="{StaticResource LightButton}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.25*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.25*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0.25*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0.25*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="LOG" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                    </Grid>
+                                </Grid>
+                                <Grid Grid.Row="1" Grid.Column="2" BorderThickness="1" BorderBrush="White">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="0.2*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.2*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.01*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="0.01*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid Grid.Column="1" Grid.Row="1">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="2*"/>
+                                            <ColumnDefinition Width="0.75*"/>
+                                            <ColumnDefinition Width="0.75*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Border Grid.Column="0" Grid.Row="1" Style="{StaticResource TitleBorderInner}" BorderThickness="0" BorderBrush="White">
+                                            <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                <TextBlock Style="{StaticResource Title}" Text="WEIGHT" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                            </Viewbox>
+                                        </Border>
+                                        <Button Style="{StaticResource LightButton}" Grid.Column="1" VerticalAlignment="Stretch" >
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.05*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.05*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0.05*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0.05*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="+" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                        <Button Style="{StaticResource LightButton}" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.05*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.05*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="-" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                    </Grid>
+                                    <Grid Grid.Column="1" Grid.Row="2">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="2*"/>
+                                            <ColumnDefinition Width="0.75*"/>
+                                            <ColumnDefinition Width="0.75*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Border Grid.Column="0" Grid.Row="1" Style="{StaticResource TitleBorderInner}" BorderThickness="0" BorderBrush="White">
+                                            <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                <TextBlock Style="{StaticResource Title}" Text="WEIGHT" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                            </Viewbox>
+                                        </Border>
+                                        <Button Style="{StaticResource LightButton}" Grid.Column="1" VerticalAlignment="Stretch" >
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.05*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.05*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0.05*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0.05*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="+" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                        <Button Style="{StaticResource LightButton}" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.05*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.05*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="-" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                    </Grid>
+                                    <Grid Grid.Column="2" Grid.Row="1" Grid.RowSpan="2">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="0.25*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="0.25*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="0.15*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="0.15*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Button Grid.Row="1" Grid.Column="1" Style="{StaticResource LightButton}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.25*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.25*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0.25*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0.25*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="LOG" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                    </Grid>
+                                </Grid>
+                                <Grid Grid.Row="1" Grid.Column="3" BorderThickness="1" BorderBrush="White">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="0.2*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.2*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.01*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="0.01*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid Grid.Column="1" Grid.Row="1">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="2*"/>
+                                            <ColumnDefinition Width="0.75*"/>
+                                            <ColumnDefinition Width="0.75*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Border Grid.Column="0" Grid.Row="1" Style="{StaticResource TitleBorderInner}" BorderThickness="0" BorderBrush="White">
+                                            <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                <TextBlock Style="{StaticResource Title}" Text="WEIGHT" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                            </Viewbox>
+                                        </Border>
+                                        <Button Style="{StaticResource LightButton}" Grid.Column="1" VerticalAlignment="Stretch" >
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.05*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.05*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0.05*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0.05*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="+" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                        <Button Style="{StaticResource LightButton}" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.05*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.05*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="-" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                    </Grid>
+                                    <Grid Grid.Column="1" Grid.Row="2">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="2*"/>
+                                            <ColumnDefinition Width="0.75*"/>
+                                            <ColumnDefinition Width="0.75*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Border Grid.Column="0" Grid.Row="1" Style="{StaticResource TitleBorderInner}" BorderThickness="0" BorderBrush="White">
+                                            <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                <TextBlock Style="{StaticResource Title}" Text="WEIGHT" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                            </Viewbox>
+                                        </Border>
+                                        <Button Style="{StaticResource LightButton}" Grid.Column="1" VerticalAlignment="Stretch" >
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.05*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.05*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0.05*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0.05*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="+" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                        <Button Style="{StaticResource LightButton}" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.05*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.05*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="-" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                    </Grid>
+                                    <Grid Grid.Column="2" Grid.Row="1" Grid.RowSpan="2">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="0.25*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="0.25*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="0.15*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="0.15*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Button Grid.Row="1" Grid.Column="1" Style="{StaticResource LightButton}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.25*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.25*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0.25*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0.25*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="LOG" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                    <Grid Grid.Row="3" Grid.RowSpan="1" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.2*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="0.2*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.01*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="0.01*"/>
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Row="1" Grid.Column="1" BorderBrush="White" BorderThickness="3">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="0.4*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="0.1*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.5*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid Grid.Row="0" Grid.Column="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="0*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="0*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Border Grid.Column="1" Grid.Row="1" Style="{StaticResource TitleBorderInner}" BorderThickness="0" BorderBrush="White">
+                                        <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                            <TextBlock Style="{StaticResource Title}" Text="EXERCISE 2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                        </Viewbox>
+                                    </Border>
+                                </Grid>
+                                <Grid Grid.Row="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="0.2*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.2*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.01*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="0.01*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource ButtonText}" Text="WEIGHT"/>
+                                    <TextBlock Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource ButtonText}" Text="REPS"/>
+                                </Grid>
+                                <Grid Grid.Row="1" Grid.Column="1" BorderThickness="1" BorderBrush="White">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="0.2*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.2*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.01*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="0.01*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid Grid.Column="1" Grid.Row="1">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="2*"/>
+                                            <ColumnDefinition Width="0.75*"/>
+                                            <ColumnDefinition Width="0.75*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Border Grid.Column="0" Grid.Row="1" Style="{StaticResource TitleBorderInner}" BorderThickness="0" BorderBrush="White">
+                                            <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                <TextBlock Style="{StaticResource Title}" Text="WEIGHT" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                            </Viewbox>
+                                        </Border>
+                                        <Button Style="{StaticResource LightButton}" Grid.Column="1" VerticalAlignment="Stretch" >
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.05*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.05*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0.05*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0.05*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="+" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                        <Button Style="{StaticResource LightButton}" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.05*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.05*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="-" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                    </Grid>
+                                    <Grid Grid.Column="1" Grid.Row="2">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="2*"/>
+                                            <ColumnDefinition Width="0.75*"/>
+                                            <ColumnDefinition Width="0.75*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Border Grid.Column="0" Grid.Row="1" Style="{StaticResource TitleBorderInner}" BorderThickness="0" BorderBrush="White">
+                                            <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                <TextBlock Style="{StaticResource Title}" Text="WEIGHT" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                            </Viewbox>
+                                        </Border>
+                                        <Button Style="{StaticResource LightButton}" Grid.Column="1" VerticalAlignment="Stretch" >
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.05*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.05*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0.05*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0.05*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="+" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                        <Button Style="{StaticResource LightButton}" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.05*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.05*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="-" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                    </Grid>
+                                    <Grid Grid.Column="2" Grid.Row="1" Grid.RowSpan="2">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="0.25*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="0.25*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="0.15*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="0.15*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Button Grid.Row="1" Grid.Column="1" Style="{StaticResource LightButton}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.25*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.25*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0.25*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0.25*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="LOG" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                    </Grid>
+                                </Grid>
+                                <Grid Grid.Row="1" Grid.Column="2" BorderThickness="1" BorderBrush="White">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="0.2*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.2*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.01*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="0.01*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid Grid.Column="1" Grid.Row="1">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="2*"/>
+                                            <ColumnDefinition Width="0.75*"/>
+                                            <ColumnDefinition Width="0.75*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Border Grid.Column="0" Grid.Row="1" Style="{StaticResource TitleBorderInner}" BorderThickness="0" BorderBrush="White">
+                                            <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                <TextBlock Style="{StaticResource Title}" Text="WEIGHT" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                            </Viewbox>
+                                        </Border>
+                                        <Button Style="{StaticResource LightButton}" Grid.Column="1" VerticalAlignment="Stretch" >
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.05*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.05*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0.05*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0.05*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="+" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                        <Button Style="{StaticResource LightButton}" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.05*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.05*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="-" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                    </Grid>
+                                    <Grid Grid.Column="1" Grid.Row="2">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="2*"/>
+                                            <ColumnDefinition Width="0.75*"/>
+                                            <ColumnDefinition Width="0.75*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Border Grid.Column="0" Grid.Row="1" Style="{StaticResource TitleBorderInner}" BorderThickness="0" BorderBrush="White">
+                                            <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                <TextBlock Style="{StaticResource Title}" Text="WEIGHT" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                            </Viewbox>
+                                        </Border>
+                                        <Button Style="{StaticResource LightButton}" Grid.Column="1" VerticalAlignment="Stretch" >
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.05*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.05*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0.05*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0.05*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="+" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                        <Button Style="{StaticResource LightButton}" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.05*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.05*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="-" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                    </Grid>
+                                    <Grid Grid.Column="2" Grid.Row="1" Grid.RowSpan="2">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="0.25*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="0.25*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="0.15*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="0.15*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Button Grid.Row="1" Grid.Column="1" Style="{StaticResource LightButton}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.25*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.25*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0.25*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0.25*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="LOG" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                    </Grid>
+                                </Grid>
+                                <Grid Grid.Row="1" Grid.Column="3" BorderThickness="1" BorderBrush="White">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="0.2*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.2*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.01*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="0.01*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid Grid.Column="1" Grid.Row="1">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="2*"/>
+                                            <ColumnDefinition Width="0.75*"/>
+                                            <ColumnDefinition Width="0.75*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Border Grid.Column="0" Grid.Row="1" Style="{StaticResource TitleBorderInner}" BorderThickness="0" BorderBrush="White">
+                                            <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                <TextBlock Style="{StaticResource Title}" Text="WEIGHT" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                            </Viewbox>
+                                        </Border>
+                                        <Button Style="{StaticResource LightButton}" Grid.Column="1" VerticalAlignment="Stretch" >
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.05*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.05*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0.05*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0.05*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="+" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                        <Button Style="{StaticResource LightButton}" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.05*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.05*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="-" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                    </Grid>
+                                    <Grid Grid.Column="1" Grid.Row="2">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="2*"/>
+                                            <ColumnDefinition Width="0.75*"/>
+                                            <ColumnDefinition Width="0.75*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Border Grid.Column="0" Grid.Row="1" Style="{StaticResource TitleBorderInner}" BorderThickness="0" BorderBrush="White">
+                                            <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                <TextBlock Style="{StaticResource Title}" Text="WEIGHT" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                            </Viewbox>
+                                        </Border>
+                                        <Button Style="{StaticResource LightButton}" Grid.Column="1" VerticalAlignment="Stretch" >
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.05*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.05*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0.05*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0.05*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="+" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                        <Button Style="{StaticResource LightButton}" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.05*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.05*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="-" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                    </Grid>
+                                    <Grid Grid.Column="2" Grid.Row="1" Grid.RowSpan="2">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="0.25*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="0.25*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="0.15*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="0.15*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Button Grid.Row="1" Grid.Column="1" Style="{StaticResource LightButton}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.25*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.25*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0.25*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0.25*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="LOG" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                    <Grid Grid.Row="4" Grid.RowSpan="1" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.2*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="0.2*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.01*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="0.01*"/>
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Row="1" Grid.Column="1" BorderBrush="White" BorderThickness="3">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="0.4*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="0.1*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.5*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid Grid.Row="0" Grid.Column="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="0*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="0*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Border Grid.Column="1" Grid.Row="1" Style="{StaticResource TitleBorderInner}" BorderThickness="0" BorderBrush="White">
+                                        <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                            <TextBlock Style="{StaticResource Title}" Text="EXERCISE 3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                        </Viewbox>
+                                    </Border>
+                                </Grid>
+                                <Grid Grid.Row="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="0.2*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.2*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.01*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="0.01*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource ButtonText}" Text="WEIGHT"/>
+                                    <TextBlock Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource ButtonText}" Text="REPS"/>
+                                </Grid>
+                                <Grid Grid.Row="1" Grid.Column="1" BorderThickness="1" BorderBrush="White">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="0.2*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.2*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.01*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="0.01*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid Grid.Column="1" Grid.Row="1">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="2*"/>
+                                            <ColumnDefinition Width="0.75*"/>
+                                            <ColumnDefinition Width="0.75*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Border Grid.Column="0" Grid.Row="1" Style="{StaticResource TitleBorderInner}" BorderThickness="0" BorderBrush="White">
+                                            <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                <TextBlock Style="{StaticResource Title}" Text="WEIGHT" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                            </Viewbox>
+                                        </Border>
+                                        <Button Style="{StaticResource LightButton}" Grid.Column="1" VerticalAlignment="Stretch" >
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.05*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.05*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0.05*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0.05*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="+" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                        <Button Style="{StaticResource LightButton}" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.05*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.05*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="-" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                    </Grid>
+                                    <Grid Grid.Column="1" Grid.Row="2">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="2*"/>
+                                            <ColumnDefinition Width="0.75*"/>
+                                            <ColumnDefinition Width="0.75*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Border Grid.Column="0" Grid.Row="1" Style="{StaticResource TitleBorderInner}" BorderThickness="0" BorderBrush="White">
+                                            <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                <TextBlock Style="{StaticResource Title}" Text="WEIGHT" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                            </Viewbox>
+                                        </Border>
+                                        <Button Style="{StaticResource LightButton}" Grid.Column="1" VerticalAlignment="Stretch" >
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.05*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.05*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0.05*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0.05*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="+" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                        <Button Style="{StaticResource LightButton}" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.05*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.05*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="-" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                    </Grid>
+                                    <Grid Grid.Column="2" Grid.Row="1" Grid.RowSpan="2">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="0.25*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="0.25*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="0.15*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="0.15*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Button Grid.Row="1" Grid.Column="1" Style="{StaticResource LightButton}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.25*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.25*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0.25*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0.25*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="LOG" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                    </Grid>
+                                </Grid>
+                                <Grid Grid.Row="1" Grid.Column="2" BorderThickness="1" BorderBrush="White">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="0.2*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.2*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.01*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="0.01*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid Grid.Column="1" Grid.Row="1">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="2*"/>
+                                            <ColumnDefinition Width="0.75*"/>
+                                            <ColumnDefinition Width="0.75*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Border Grid.Column="0" Grid.Row="1" Style="{StaticResource TitleBorderInner}" BorderThickness="0" BorderBrush="White">
+                                            <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                <TextBlock Style="{StaticResource Title}" Text="WEIGHT" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                            </Viewbox>
+                                        </Border>
+                                        <Button Style="{StaticResource LightButton}" Grid.Column="1" VerticalAlignment="Stretch" >
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.05*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.05*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0.05*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0.05*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="+" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                        <Button Style="{StaticResource LightButton}" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.05*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.05*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="-" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                    </Grid>
+                                    <Grid Grid.Column="1" Grid.Row="2">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="2*"/>
+                                            <ColumnDefinition Width="0.75*"/>
+                                            <ColumnDefinition Width="0.75*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Border Grid.Column="0" Grid.Row="1" Style="{StaticResource TitleBorderInner}" BorderThickness="0" BorderBrush="White">
+                                            <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                <TextBlock Style="{StaticResource Title}" Text="WEIGHT" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                            </Viewbox>
+                                        </Border>
+                                        <Button Style="{StaticResource LightButton}" Grid.Column="1" VerticalAlignment="Stretch" >
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.05*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.05*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0.05*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0.05*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="+" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                        <Button Style="{StaticResource LightButton}" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.05*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.05*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="-" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                    </Grid>
+                                    <Grid Grid.Column="2" Grid.Row="1" Grid.RowSpan="2">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="0.25*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="0.25*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="0.15*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="0.15*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Button Grid.Row="1" Grid.Column="1" Style="{StaticResource LightButton}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.25*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.25*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0.25*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0.25*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="LOG" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                    </Grid>
+                                </Grid>
+                                <Grid Grid.Row="1" Grid.Column="3" BorderThickness="1" BorderBrush="White">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="0.2*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.2*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.01*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="0.01*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid Grid.Column="1" Grid.Row="1">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="2*"/>
+                                            <ColumnDefinition Width="0.75*"/>
+                                            <ColumnDefinition Width="0.75*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Border Grid.Column="0" Grid.Row="1" Style="{StaticResource TitleBorderInner}" BorderThickness="0" BorderBrush="White">
+                                            <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                <TextBlock Style="{StaticResource Title}" Text="WEIGHT" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                            </Viewbox>
+                                        </Border>
+                                        <Button Style="{StaticResource LightButton}" Grid.Column="1" VerticalAlignment="Stretch" >
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.05*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.05*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0.05*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0.05*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="+" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                        <Button Style="{StaticResource LightButton}" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.05*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.05*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="-" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                    </Grid>
+                                    <Grid Grid.Column="1" Grid.Row="2">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="2*"/>
+                                            <ColumnDefinition Width="0.75*"/>
+                                            <ColumnDefinition Width="0.75*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Border Grid.Column="0" Grid.Row="1" Style="{StaticResource TitleBorderInner}" BorderThickness="0" BorderBrush="White">
+                                            <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                <TextBlock Style="{StaticResource Title}" Text="WEIGHT" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                            </Viewbox>
+                                        </Border>
+                                        <Button Style="{StaticResource LightButton}" Grid.Column="1" VerticalAlignment="Stretch" >
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.05*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.05*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0.05*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0.05*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="+" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                        <Button Style="{StaticResource LightButton}" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.05*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.05*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="-" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                    </Grid>
+                                    <Grid Grid.Column="2" Grid.Row="1" Grid.RowSpan="2">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="0.25*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="0.25*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="0.15*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="0.15*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Button Grid.Row="1" Grid.Column="1" Style="{StaticResource LightButton}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="0.25*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="0.25*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0.25*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0.25*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                                    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                        <TextBlock Style="{StaticResource ButtonText}" Text="LOG" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    </Viewbox>
+                                                </Border>
+                                            </Grid>
+                                        </Button>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                    <Button Grid.Row="5" Grid.Column="2" Style="{StaticResource LightButton}" Click="NavToRoutineRecords" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="5" Margin="0,0,0,0" Grid.RowSpan="2">
+                        <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="0.5*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="0.5*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.5*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="0.5*"/>
+                            </Grid.ColumnDefinitions>
+                            <Border Grid.Column="1" Grid.Row="1" BorderThickness="0" BorderBrush="White">
+                                <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                    <TextBlock Style="{StaticResource Title}" Text="SAVE" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                </Viewbox>
+                            </Border>
+                        </Grid>
                     </Button>
                 </Grid>
             </SplitView.Content>

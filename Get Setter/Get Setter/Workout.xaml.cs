@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Get_Setter.DatabaseQueries
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -22,14 +23,22 @@ namespace Get_Setter
     /// </summary>
     public sealed partial class Workout : Page
     {
-        public Workout()
+        private GetSetterDb dbConn;
+
+        public Workout(GetSetterDb dbConn)
         {
             this.InitializeComponent();
+            this.dbConn = dbConn;
         }
 
         private void PaneTrigger(object sender, RoutedEventArgs e)
         {
             NavigationPane.IsPaneOpen = !NavigationPane.IsPaneOpen;
+        }
+
+        private void NavToHomePage(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
         }
 
         private void NavToRoutineManagement(object sender, RoutedEventArgs e)

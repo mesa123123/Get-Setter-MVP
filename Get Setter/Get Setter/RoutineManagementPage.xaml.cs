@@ -13,7 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using SQLite.Net;
-using Get_Setter.Models;
+using Get_Setter.DatabaseQueries;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -25,10 +25,12 @@ namespace Get_Setter
     public sealed partial class RoutineManagementPage : Page
     {
 
+        private GetSetterDb dbConn;
 
         public RoutineManagementPage()
         {
             this.InitializeComponent();
+            dbConn = new GetSetterDb();
         }
 
         private void PaneTrigger(object sender, RoutedEventArgs e)
@@ -38,7 +40,7 @@ namespace Get_Setter
 
         private void NavToNewRoutine(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(RoutineManagementPage));
+            this.Frame.Navigate(typeof(NewRoutinePage));
         }
 
         private void NavToRoutineRecords(object sender, RoutedEventArgs e)

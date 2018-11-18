@@ -25,6 +25,11 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
+        <Button Grid.Column="4" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="GetExercises" Click="displayExercises" />
+        <ListView>
+            
+        </ListView>
+
         <Border Grid.Row="0" Grid.Column="1" Background="{StaticResource LightBluePrint}" Grid.RowSpan="7"/>
         <Border Style="{StaticResource TitleBorderOuter}" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Margin="0">
             <Grid>
@@ -48,7 +53,7 @@
         <Button Style="{StaticResource DarkButton}" Click="NavToRoutineManagement" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Margin="60, 5, 5, 5" Padding="40 0 40 0" MinHeight="60">
             <TextBlock Style="{StaticResource ButtonText}" Text="MY ROUTINES" FontSize="20"/>
         </Button>
-        <Button Style="{StaticResource LightButton}" Click="NavToRoutineRecords" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Margin="60, 5, 5, 5" Padding="30 0" MinHeight="60">
+        <Button Style="{StaticResource DarkButton}" Click="NavToRoutineRecords" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Margin="60, 5, 5, 5" Padding="30 0" MinHeight="60">
             <TextBlock Style="{StaticResource ButtonText}" Text="ROUTINE RECORDS" FontSize="17"/>
         </Button>
         <Button Style="{StaticResource LightButton}" Click="NavToThisWorkout" Grid.Row="4" Grid.Column="4" Grid.ColumnSpan="2" Grid.RowSpan="3" MinHeight="175" MinWidth="600" Margin="50 0 0 0" BorderThickness="0">
