@@ -134,12 +134,11 @@ Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
                     <Button Grid.Row="1" Grid.Column="0" Style="{StaticResource DarkButton}" Click="PaneTrigger" Margin="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
                         <TextBlock Style="{StaticResource ButtonText}" Text="MENU"/>
                     </Button>
-                    <Button Grid.Row="7" Grid.Column="2" Style="{StaticResource LightButton}" Click="NavToHomePage" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="5">
-                        <TextBlock Text="PLOT?" Style="{StaticResource ButtonText}"/>
-                    </Button>
-                    <ListView>
-                        
-                    </ListView>
+                    <Border Grid.Column="2" Grid.Row="1" Style="{StaticResource TitleBorderInner}" BorderThickness="0" BorderBrush="White">
+                        <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                            <TextBlock Style="{StaticResource Title}" Text="RECORDS" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                        </Viewbox>
+                    </Border>
                 </Grid>
             </SplitView.Content>
         </SplitView>

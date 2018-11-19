@@ -263,7 +263,7 @@
                                         </Grid.ColumnDefinitions>
                                         <Border Grid.Column="1" Grid.Row="1" Style="{StaticResource TitleBorderInner}" BorderThickness="0" BorderBrush="White">
                                             <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                                                <TextBlock Style="{StaticResource Title}" Text="DAY 1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                <TextBlock Style="{StaticResource Title}" Text="CHEST" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
                                             </Viewbox>
                                         </Border>
                                     </Grid>
@@ -275,28 +275,19 @@
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
                                         <Border Style="{StaticResource TitleBorderInner}" BorderThickness="3" BorderBrush="White" Grid.Column="0" Grid.Row="1" Grid.RowSpan="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-                                            <StackPanel>
-                                                <TextBlock Style="{StaticResource ButtonText}" Text="DAY 1: 1ST" Margin="10"/>
-                                                <RadioButton Style="{StaticResource RadioBluePrint}" Grid.Row="1" Grid.Column="0" Content="FLY" Tag="buildMuscle" GroupName="Day1_1" Checked="Day1_1_Checked" IsChecked="True" Margin="10"/>
-                                                <RadioButton Style="{StaticResource RadioBluePrint}" Grid.Row="1" Grid.Column="0" Content="CABLES" Tag="buildMuscle" GroupName="Day1_1" Checked="Day1_1_Checked" Margin="10"/>
-                                                <RadioButton Style="{StaticResource RadioBluePrint}" Grid.Row="1" Grid.Column="0" Content="INCLINE BENCH" Tag="buildMuscle" GroupName="Day1_1" Checked="Day1_1_Checked" Margin="10"/>
+                                            <StackPanel Name="StackChest1">
+                                            <TextBlock Style="{StaticResource ButtonText}" Text="DAY 1: 1ST" Margin="10"/>
                                             </StackPanel>
                                         </Border>
                                         <Border Style="{StaticResource TitleBorderInner}" BorderThickness="3" BorderBrush="White" Grid.Column="1" Grid.Row="1" Grid.RowSpan="3">
-                                            <StackPanel>
+                                            <StackPanel Name="StackChest2">
                                                 <TextBlock Style="{StaticResource ButtonText}" Text="DAY 1: 2ND" Margin="10"/>
-                                                <RadioButton Style="{StaticResource RadioBluePrint}" Grid.Row="1" Grid.Column="0" Content="FLY" Tag="buildMuscle" GroupName="Day1_2" Checked="Day1_2_Checked" IsChecked="True" Margin="10"/>
-                                                <RadioButton Style="{StaticResource RadioBluePrint}" Grid.Row="1" Grid.Column="0" Content="CABLES" Tag="buildMuscle" GroupName="Day1_2" Checked="Day1_2_Checked" Margin="10"/>
-                                                <RadioButton Style="{StaticResource RadioBluePrint}" Grid.Row="1" Grid.Column="0" Content="INCLINE BENCH" Tag="buildMuscle" GroupName="Day1_2" Checked="Day1_2_Checked" Margin="10"/>
-                                            </StackPanel>
+                                                 </StackPanel>
                                         </Border>
                                         <Border Style="{StaticResource TitleBorderInner}" BorderThickness="3" BorderBrush="White" Grid.Column="2" Grid.Row="1" Grid.RowSpan="3">
-                                            <StackPanel>
+                                            <StackPanel Name="StackChest3"> 
                                                 <TextBlock Style="{StaticResource ButtonText}" Text="DAY 1: 3RD" Margin="10"/>
-                                                <RadioButton Style="{StaticResource RadioBluePrint}" Grid.Row="1" Grid.Column="0" Content="FLY" Tag="buildMuscle" GroupName="Day1_3" Checked="Day1_3_Checked" IsChecked="True" Margin="10"/>
-                                                <RadioButton Style="{StaticResource RadioBluePrint}" Grid.Row="1" Grid.Column="0" Content="CABLES" Tag="buildMuscle" GroupName="Day1_3" Checked="Day1_3_Checked" Margin="10"/>
-                                                <RadioButton Style="{StaticResource RadioBluePrint}" Grid.Row="1" Grid.Column="0" Content="INCLINE BENCH" Tag="buildMuscle" GroupName="Day1_3" Checked="Day1_3_Checked" Margin="10"/>
-                                            </StackPanel>
+                                          </StackPanel>
                                         </Border>
                                     </Grid>
                                 </PivotItem>
@@ -315,7 +306,7 @@
                                         </Grid.ColumnDefinitions>
                                         <Border Grid.Column="1" Grid.Row="1" Style="{StaticResource TitleBorderInner}" BorderThickness="0" BorderBrush="White">
                                             <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                                                <TextBlock Style="{StaticResource Title}" Text="DAY 2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                <TextBlock Style="{StaticResource Title}" Text="BACK" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
                                             </Viewbox>
                                         </Border>
                                     </Grid>
@@ -327,7 +318,7 @@
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
                                         <Border Style="{StaticResource TitleBorderInner}" BorderThickness="3" BorderBrush="White" Grid.Column="0" Grid.Row="1" Grid.RowSpan="3">
-                                            <StackPanel>
+                                            <StackPanel Name="StackBack1">
                                             <Grid>
                                                 <Grid.RowDefinitions>
                                                     <RowDefinition Height="0*"/>
@@ -345,13 +336,10 @@
                                                     </Viewbox>
                                                 </Border>
                                             </Grid>
-                                            <RadioButton Style="{StaticResource RadioBluePrint}" Grid.Row="1" Grid.Column="0" Content="FLY" Tag="buildMuscle" GroupName="Day1_1" Checked="Day1_1_Checked" IsChecked="True" Margin="10"/>
-                                                <RadioButton Style="{StaticResource RadioBluePrint}" Grid.Row="1" Grid.Column="0" Content="CABLES" Tag="buildMuscle" GroupName="Day1_1" Checked="Day1_1_Checked" Margin="10"/>
-                                                <RadioButton Style="{StaticResource RadioBluePrint}" Grid.Row="1" Grid.Column="0" Content="INCLINE BENCH" Tag="buildMuscle" GroupName="Day1_1" Checked="Day1_1_Checked" Margin="10"/>
-                                            </StackPanel>
+                                        </StackPanel>
                                         </Border>
                                         <Border Style="{StaticResource TitleBorderInner}" BorderThickness="3" BorderBrush="White" Grid.Column="1" Grid.Row="1" Grid.RowSpan="3">
-                                            <StackPanel>
+                                            <StackPanel Name="StackBack2">
                                             <Grid>
                                                 <Grid.RowDefinitions>
                                                     <RowDefinition Height="0*"/>
@@ -369,13 +357,10 @@
                                                     </Viewbox>
                                                 </Border>
                                             </Grid>
-                                            <RadioButton Style="{StaticResource RadioBluePrint}" Grid.Row="1" Grid.Column="0" Content="FLY" Tag="buildMuscle" GroupName="Day1_2" Checked="Day1_2_Checked" IsChecked="True" Margin="10"/>
-                                                <RadioButton Style="{StaticResource RadioBluePrint}" Grid.Row="1" Grid.Column="0" Content="CABLES" Tag="buildMuscle" GroupName="Day1_2" Checked="Day1_2_Checked" Margin="10"/>
-                                                <RadioButton Style="{StaticResource RadioBluePrint}" Grid.Row="1" Grid.Column="0" Content="INCLINE BENCH" Tag="buildMuscle" GroupName="Day1_2" Checked="Day1_2_Checked" Margin="10"/>
-                                            </StackPanel>
+                                        </StackPanel>
                                         </Border>
                                         <Border Style="{StaticResource TitleBorderInner}" BorderThickness="3" BorderBrush="White" Grid.Column="2" Grid.Row="1" Grid.RowSpan="3">
-                                            <StackPanel>
+                                            <StackPanel Name="StackBack3">
                                             <Grid>
                                                 <Grid.RowDefinitions>
                                                     <RowDefinition Height="0*"/>
@@ -393,10 +378,7 @@
                                                     </Viewbox>
                                                 </Border>
                                             </Grid>
-                                            <RadioButton Style="{StaticResource RadioBluePrint}" Grid.Row="1" Grid.Column="0" Content="FLY" Tag="buildMuscle" GroupName="Day1_3" Checked="Day1_3_Checked" IsChecked="True" Margin="10"/>
-                                                <RadioButton Style="{StaticResource RadioBluePrint}" Grid.Row="1" Grid.Column="0" Content="CABLES" Tag="buildMuscle" GroupName="Day1_3" Checked="Day1_3_Checked" Margin="10"/>
-                                                <RadioButton Style="{StaticResource RadioBluePrint}" Grid.Row="1" Grid.Column="0" Content="INCLINE BENCH" Tag="buildMuscle" GroupName="Day1_3" Checked="Day1_3_Checked" Margin="10"/>
-                                            </StackPanel>
+                                        </StackPanel>
                                         </Border>
                                     </Grid>
                                 </PivotItem>
@@ -415,7 +397,7 @@
                                             </Grid.ColumnDefinitions>
                                             <Border Grid.Column="1" Grid.Row="1" Style="{StaticResource TitleBorderInner}" BorderThickness="0" BorderBrush="White">
                                                 <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                                                    <TextBlock Style="{StaticResource Title}" Text="DAY 3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                    <TextBlock Style="{StaticResource Title}" Text="LEGS" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
                                                 </Viewbox>
                                             </Border>
                                         </Grid>
@@ -427,27 +409,18 @@
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
                                         <Border Style="{StaticResource TitleBorderInner}" BorderThickness="3" BorderBrush="White" Grid.Column="0" Grid.Row="1" Grid.RowSpan="3">
-                                            <StackPanel>
+                                            <StackPanel Name="StackLeg1">
                                                 <TextBlock Style="{StaticResource ButtonText}" Text="DAY 1: 1ST" Margin="10"/>
-                                                <RadioButton Style="{StaticResource RadioBluePrint}" Grid.Row="1" Grid.Column="0" Content="FLY" Tag="buildMuscle" GroupName="Day1_1" Checked="Day1_1_Checked" IsChecked="True" Margin="10"/>
-                                                <RadioButton Style="{StaticResource RadioBluePrint}" Grid.Row="1" Grid.Column="0" Content="CABLES" Tag="buildMuscle" GroupName="Day1_1" Checked="Day1_1_Checked" Margin="10"/>
-                                                <RadioButton Style="{StaticResource RadioBluePrint}" Grid.Row="1" Grid.Column="0" Content="INCLINE BENCH" Tag="buildMuscle" GroupName="Day1_1" Checked="Day1_1_Checked" Margin="10"/>
                                             </StackPanel>
                                         </Border>
                                         <Border Style="{StaticResource TitleBorderInner}" BorderThickness="3" BorderBrush="White" Grid.Column="1" Grid.Row="1" Grid.RowSpan="3">
-                                            <StackPanel>
+                                            <StackPanel Name="StackLeg2">
                                                 <TextBlock Style="{StaticResource ButtonText}" Text="DAY 1: 2ND" Margin="10"/>
-                                                <RadioButton Style="{StaticResource RadioBluePrint}" Grid.Row="1" Grid.Column="0" Content="FLY" Tag="buildMuscle" GroupName="Day1_2" Checked="Day1_2_Checked" IsChecked="True" Margin="10"/>
-                                                <RadioButton Style="{StaticResource RadioBluePrint}" Grid.Row="1" Grid.Column="0" Content="CABLES" Tag="buildMuscle" GroupName="Day1_2" Checked="Day1_2_Checked" Margin="10"/>
-                                                <RadioButton Style="{StaticResource RadioBluePrint}" Grid.Row="1" Grid.Column="0" Content="INCLINE BENCH" Tag="buildMuscle" GroupName="Day1_2" Checked="Day1_2_Checked" Margin="10"/>
                                             </StackPanel>
                                         </Border>
                                         <Border Style="{StaticResource TitleBorderInner}" BorderThickness="3" BorderBrush="White" Grid.Column="2" Grid.Row="1" Grid.RowSpan="3">
-                                            <StackPanel>
+                                            <StackPanel Name="StackLeg3">
                                                 <TextBlock Style="{StaticResource ButtonText}" Text="DAY 1: 3RD" Margin="10"/>
-                                                <RadioButton Style="{StaticResource RadioBluePrint}" Grid.Row="1" Grid.Column="0" Content="FLY" Tag="buildMuscle" GroupName="Day1_3" Checked="Day1_3_Checked" IsChecked="True" Margin="10"/>
-                                                <RadioButton Style="{StaticResource RadioBluePrint}" Grid.Row="1" Grid.Column="0" Content="CABLES" Tag="buildMuscle" GroupName="Day1_3" Checked="Day1_3_Checked" Margin="10"/>
-                                                <RadioButton Style="{StaticResource RadioBluePrint}" Grid.Row="1" Grid.Column="0" Content="INCLINE BENCH" Tag="buildMuscle" GroupName="Day1_3" Checked="Day1_3_Checked" Margin="10"/>
                                             </StackPanel>
                                         </Border>
                                     </Grid>
@@ -467,7 +440,7 @@
                                         </Grid.ColumnDefinitions>
                                         <Border Grid.Column="1" Grid.Row="1" Style="{StaticResource TitleBorderInner}" BorderThickness="0" BorderBrush="White">
                                             <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                                                <TextBlock Style="{StaticResource Title}" Text="DAY 4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                                <TextBlock Style="{StaticResource Title}" Text="ARMS" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
                                             </Viewbox>
                                         </Border>
                                     </Grid>
@@ -479,27 +452,18 @@
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
                                         <Border Style="{StaticResource TitleBorderInner}" BorderThickness="3" BorderBrush="White" Grid.Column="0" Grid.Row="1" Grid.RowSpan="3">
-                                            <StackPanel>
+                                            <StackPanel Name="StackArm1">
                                                 <TextBlock Style="{StaticResource ButtonText}" Text="DAY 1: 1ST" Margin="10"/>
-                                                <RadioButton Style="{StaticResource RadioBluePrint}" Grid.Row="1" Grid.Column="0" Content="FLY" Tag="buildMuscle" GroupName="Day1_1" Checked="Day1_1_Checked" IsChecked="True" Margin="10"/>
-                                                <RadioButton Style="{StaticResource RadioBluePrint}" Grid.Row="1" Grid.Column="0" Content="CABLES" Tag="buildMuscle" GroupName="Day1_1" Checked="Day1_1_Checked" Margin="10"/>
-                                                <RadioButton Style="{StaticResource RadioBluePrint}" Grid.Row="1" Grid.Column="0" Content="INCLINE BENCH" Tag="buildMuscle" GroupName="Day1_1" Checked="Day1_1_Checked" Margin="10"/>
                                             </StackPanel>
                                         </Border>
                                         <Border Style="{StaticResource TitleBorderInner}" BorderThickness="3" BorderBrush="White" Grid.Column="1" Grid.Row="1" Grid.RowSpan="3">
-                                            <StackPanel>
+                                            <StackPanel Name="StackArm2">
                                                 <TextBlock Style="{StaticResource ButtonText}" Text="DAY 1: 2ND" Margin="10"/>
-                                                <RadioButton Style="{StaticResource RadioBluePrint}" Grid.Row="1" Grid.Column="0" Content="FLY" Tag="buildMuscle" GroupName="Day1_2" Checked="Day1_2_Checked" IsChecked="True" Margin="10"/>
-                                                <RadioButton Style="{StaticResource RadioBluePrint}" Grid.Row="1" Grid.Column="0" Content="CABLES" Tag="buildMuscle" GroupName="Day1_2" Checked="Day1_2_Checked" Margin="10"/>
-                                                <RadioButton Style="{StaticResource RadioBluePrint}" Grid.Row="1" Grid.Column="0" Content="INCLINE BENCH" Tag="buildMuscle" GroupName="Day1_2" Checked="Day1_2_Checked" Margin="10"/>
                                             </StackPanel>
                                         </Border>
                                         <Border Style="{StaticResource TitleBorderInner}" BorderThickness="3" BorderBrush="White" Grid.Column="2" Grid.Row="1" Grid.RowSpan="3">
-                                            <StackPanel>
+                                            <StackPanel Name="StackArm3">
                                                 <TextBlock Style="{StaticResource ButtonText}" Text="DAY 1: 3RD" Margin="10"/>
-                                                <RadioButton Style="{StaticResource RadioBluePrint}" Grid.Row="1" Grid.Column="0" Content="FLY" Tag="buildMuscle" GroupName="Day1_3" Checked="Day1_3_Checked" IsChecked="True" Margin="10"/>
-                                                <RadioButton Style="{StaticResource RadioBluePrint}" Grid.Row="1" Grid.Column="0" Content="CABLES" Tag="buildMuscle" GroupName="Day1_3" Checked="Day1_3_Checked" Margin="10"/>
-                                                <RadioButton Style="{StaticResource RadioBluePrint}" Grid.Row="1" Grid.Column="0" Content="INCLINE BENCH" Tag="buildMuscle" GroupName="Day1_3" Checked="Day1_3_Checked" Margin="10"/>
                                             </StackPanel>
                                         </Border>
                                     </Grid>

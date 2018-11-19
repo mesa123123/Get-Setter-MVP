@@ -25,11 +25,6 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
-        <Button Grid.Column="4" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="GetExercises" Click="displayExercises" />
-        <ListView>
-            
-        </ListView>
-
         <Border Grid.Row="0" Grid.Column="1" Background="{StaticResource LightBluePrint}" Grid.RowSpan="7"/>
         <Border Style="{StaticResource TitleBorderOuter}" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Margin="0">
             <Grid>

@@ -95,8 +95,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DatabaseQueries\Database.cs" />
-    <Compile Include="Entities\Entites.cs" />
+    <Compile Include="Exercise.cs" />
+    <Compile Include="Database.cs" />
+    <Compile Include="Entites.cs" />
     <Compile Include="NewRoutinePage.xaml.cs">
       <DependentUpon>NewRoutinePage.xaml</DependentUpon>
     </Compile>

@@ -13,7 +13,10 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using SQLite.Net;
-using Get_Setter.DatabaseQueries;
+using Get_Setter.Database;
+using System.Collections.ObjectModel;
+using Get_Setter.Entities;
+using System.Diagnostics;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -25,12 +28,36 @@ namespace Get_Setter
     public sealed partial class RoutineManagementPage : Page
     {
 
-        private GetSetterDb dbConn;
+        ObservableCollection<Routine> routinesList;
 
         public RoutineManagementPage()
         {
             this.InitializeComponent();
-            dbConn = new GetSetterDb();
+            routinesList = new GetSetterDb().GetRoutines("SELECT DISTINCT * FROM Routines");
+            Debug.Write(routinesList.Count);
+            DrawRoutinesLists();
+        }
+
+        private void DrawRoutinesLists()
+        {
+            Style DarkButton = Application.Current.Resources["DarkButton"] as Style;
+            foreach (Routine routine in routinesList)
+            {
+                Viewbox viewboxy = new Viewbox();
+                Button routineButton = new Button();
+                routineButton.Content = "ROUTINE: " + routine.RoutineID;
+                routineButton.Style = DarkButton;
+                routineButton.Foreground = new SolidColorBrush(Windows.UI.Colors.White);
+                routineButton.FontFamily = new FontFamily("./Assets/Draftsman.tff#Draftsman");
+                routineButton.Click += NavToRoutineRecords;
+                routineButton.HorizontalAlignment = HorizontalAlignment.Stretch;
+                routineButton.VerticalAlignment = VerticalAlignment.Stretch;
+                routineButton.Margin = new Thickness(3);
+                viewboxy.Child = routineButton;
+                viewboxy.HorizontalAlignment = HorizontalAlignment.Stretch;
+                viewboxy.VerticalAlignment = VerticalAlignment.Stretch;
+                RoutineStacker.Children.Add(viewboxy);
+            }
         }
 
         private void PaneTrigger(object sender, RoutedEventArgs e)
@@ -58,5 +85,9 @@ namespace Get_Setter
             this.Frame.Navigate(typeof(MainPage));
         }
 
+        private void ScrollViewer_ViewChanged(object sender, ScrollViewerViewChangedEventArgs e)
+        {
+
+        }
     }
 }

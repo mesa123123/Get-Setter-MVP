@@ -12,7 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using Get_Setter.DatabaseQueries;
+using Get_Setter.Database;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -24,12 +24,10 @@ namespace Get_Setter
     public sealed partial class RoutineRecords : Page
     {
 
-        private GetSetterDb dbConn;
 
-        public RoutineRecords(GetSetterDb dbConn)
+        public RoutineRecords()
         {
             this.InitializeComponent();
-            this.dbConn = dbConn;
         }
 
         private void PaneTrigger(object sender, RoutedEventArgs e)
