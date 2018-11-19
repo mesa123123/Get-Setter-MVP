@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="#ff061955">
-    <Grid x:Name="Main_Grid"  Background="#ff061955" HorizontalAlignment="Left" Margin="6,0,0,0" Width="1501" VerticalAlignment="Stretch">
+    <Grid x:Name="Main_Grid"  Background="#ff061955" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
         <Grid.RowDefinitions>
             <RowDefinition Height="0.4*"/>
             <RowDefinition Height="1.2*"/>
@@ -23,7 +23,8 @@
             <ColumnDefinition Width="1.4*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="0.3*"/>
         </Grid.ColumnDefinitions>
         <Border Grid.Row="0" Grid.Column="1" Background="{StaticResource LightBluePrint}" Grid.RowSpan="7"/>
         <Border Style="{StaticResource TitleBorderOuter}" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Margin="0">
@@ -35,24 +36,39 @@
                 </Grid.RowDefinitions>
                 <Border Style="{StaticResource TitleBorderInner}" Grid.Row="1" BorderThickness="0 3 0 3">
                     <Grid>
-                        <TextBlock Style="{StaticResource Title}" Grid.Row="0" Grid.RowSpan="1" FontSize="56" Padding="20">
+                        <Viewbox>
+                            <TextBlock Name="TitleWords" Style="{StaticResource Title}" Grid.Row="0" Grid.RowSpan="1" Padding="20">
                             GET SETTER
-                        </TextBlock>
+                            </TextBlock>
+                        </Viewbox>
                     </Grid>
                 </Border>
             </Grid>
         </Border>
-        <Button Style="{StaticResource DarkButton}" Click="NavToNewRoutine" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Margin="60, 45, 60, 0" Padding="40 0 40 0" MinHeight="60">
-            <TextBlock Style="{StaticResource ButtonText}" Text="NEW ROUTINE" FontSize="20"/>
+        <Button Style="{StaticResource DarkButton}" Click="NavToNewRoutine" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Margin="60, 45, 0, 0" Padding="40 0 40 0" MinHeight="60">
+            <Viewbox>
+                <TextBlock Style="{StaticResource ButtonText}" Text="NEW ROUTINE"/>
+            </Viewbox>
         </Button>
         <Button Style="{StaticResource DarkButton}" Click="NavToRoutineManagement" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Margin="60, 5, 5, 5" Padding="40 0 40 0" MinHeight="60">
-            <TextBlock Style="{StaticResource ButtonText}" Text="MY ROUTINES" FontSize="20"/>
+            <Viewbox>
+                <TextBlock Style="{StaticResource ButtonText}" Text="MY ROUTINES"/>
+            </Viewbox>
         </Button>
         <Button Style="{StaticResource DarkButton}" Click="NavToRoutineRecords" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Margin="60, 5, 5, 5" Padding="30 0" MinHeight="60">
-            <TextBlock Style="{StaticResource ButtonText}" Text="ROUTINE RECORDS" FontSize="17"/>
+            <Viewbox>
+                <TextBlock Style="{StaticResource ButtonText}" Text="ROUTINE RECORDS"/>
+            </Viewbox>
         </Button>
-        <Button Style="{StaticResource LightButton}" Click="NavToThisWorkout" Grid.Row="4" Grid.Column="4" Grid.ColumnSpan="2" Grid.RowSpan="3" MinHeight="175" MinWidth="600" Margin="50 0 0 0" BorderThickness="0">
-            <TextBlock Style="{StaticResource ButtonText}" Text="START WORKOUT" FontSize="50"/>
+        <Button Style="{StaticResource LightButton}" Click="ActivateAPOD" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="5" Margin="60,5,5,5" Padding="30 0" MinHeight="60">
+            <Viewbox>
+                <TextBlock Style="{StaticResource ButtonText}" Text="NASATIME!"/>
+            </Viewbox>
+        </Button>
+        <Button Style="{StaticResource LightButton}" Click="NavToThisWorkout" Grid.Row="4" Grid.Column="4" Grid.ColumnSpan="2" Grid.RowSpan="3" BorderThickness="0">
+            <Viewbox>
+                <TextBlock Style="{StaticResource ButtonText}" Text="START WORKOUT"/>
+            </Viewbox>
         </Button>
     </Grid>
 </Page>

@@ -95,6 +95,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="APOD.cs" />
+    <Compile Include="RestTalker.cs" />
     <Compile Include="Exercise.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="Entites.cs" />

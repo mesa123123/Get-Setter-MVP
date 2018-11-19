@@ -4,6 +4,10 @@ using Windows.UI.Xaml.Controls;
 using System.Collections.ObjectModel;
 using Get_Setter.Entities;
 using Get_Setter.Database;
+using Get_Setter;
+using System.Diagnostics;
+using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -42,5 +46,12 @@ namespace Get_Setter
             this.Frame.Navigate(typeof(Workout));
         }
 
+        private void ActivateAPOD(object sender, RoutedEventArgs e)
+        {
+            RestTalker nasaAPOD = new RestTalker("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY");
+            APOD todaysPhoto = nasaAPOD.talkToRestClient();
+            Main_Grid.Background = new ImageBrush { ImageSource = new BitmapImage(new System.Uri(todaysPhoto.Url)), Stretch = Stretch.Fill };
+            TitleWords.Text = "NASA'S A.P.O.D.:\n" + todaysPhoto.Title.ToUpper();
+        }
     }
 }
